@@ -1,6 +1,6 @@
 <?php 
 
-include("db.php");
+include("../db.php");
 
 if (isset($_GET['id'])){
     $id =$_GET['id'];
@@ -9,11 +9,11 @@ if (isset($_GET['id'])){
     $result = mysqli_query($conn,$query);
 
     if(!$result){
-        $_SESSION['message']='user could not be removed ';
+        $_SESSION['message']='cita could not be removed ';
     $_SESSION['message_type'] = 'danger';
     
     }else{
-        $_SESSION['message']='User was removed';
+        $_SESSION['message']='cita was removed';
         $_SESSION['message_type'] = 'danger';
     }
 

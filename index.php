@@ -12,7 +12,7 @@ include("db.php");
 <div class="container p-4">
 
     <div class="row">
-        <h1>Users</h1>
+        <h1>Citas</h1>
         <div class="col-md-4">
         
             <!-- Check in own session variable if exist message -->
@@ -38,13 +38,13 @@ include("db.php");
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Fecha Fin</label>
-                        <input class="form-control" type="datetime-local" id="Start" name="Start" value="2016-05-12T18:00:00">
+                        <label class="form-label">Fecha Inicio</label>
+                        <input class="form-control" type="datetime-local" id="Start" name="Start" value="2021-05-12T18:00:00">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Fecha Fin</label>
-                        <input class="form-control" type="datetime-local" id="End" name="End" value="2016-05-12T18:00:00">
+                        <input class="form-control" type="datetime-local" id="End" name="End" value="2021-05-12T18:00:00">
                     </div>
 
                     
@@ -57,7 +57,7 @@ include("db.php");
         </div>
         <div class="col-md-8">
             <table class="table caption-top">
-                <caption>List of users</caption>
+                <caption>List of citas</caption>
                 <thead>
                     <tr>
                     <th scope="col">id</th>
@@ -79,17 +79,17 @@ include("db.php");
                         <th scope="row"> <?php echo $row['cit_id'] ?>  </th>
                         <td> <?php echo $row['cit_nombre'] ?> </td>
                         <td> <?php echo $row['cit_descripcion'] ?> </td>
-                        <td> <?php echo $row['cit_dateFinal'] ?></td>
                         <td> <?php echo $row['cit_dateInicio'] ?> </td>
+                        <td> <?php echo $row['cit_dateFinal'] ?></td>
                         <td>
                             <!-- Concat the id -->
-                            <a href="edit.php?id=<?php echo $row['cit_id'] ?>" class="btn btn-secondary">
-                                <i class="fas fa-user-edit"></i>
+                            <a href="models/edit.php?id=<?php echo $row['cit_id'] ?>" class="btn btn-secondary">
+                                <i class="fas fa-edit"></i>
                             </a>
                         </td>
                         <td>
-                            <a href="delete.php?id=<?php echo $row['cit_id'] ?>" class="btn btn-danger">
-                                <i class="fas fa-user-minus"></i>
+                            <a href="models/delete.php?id=<?php echo $row['cit_id'] ?>" class="btn btn-danger">
+                                <i class="fas fa-minus-circle"></i>
                             </a>
                         </td>
                         </tr>
