@@ -39,12 +39,12 @@ include("db.php");
 
                     <div class="mb-3">
                         <label class="form-label">Fecha Inicio</label>
-                        <input class="form-control" type="datetime-local" id="Start" name="Start" value="2021-05-12T18:00:00">
+                        <input class="form-control" type="datetime-local" id="Start" name="Start" value="2021-07-13T18:00:00">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Fecha Fin</label>
-                        <input class="form-control" type="datetime-local" id="End" name="End" value="2021-05-12T18:00:00">
+                        <input class="form-control" type="datetime-local" id="End" name="End" value="2021-07-13T18:00:00">
                     </div>
 
                     
